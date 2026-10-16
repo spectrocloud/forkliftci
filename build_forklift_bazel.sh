@@ -46,7 +46,7 @@ if [ "${PROVIDER_NAME}" = "ovirt" ]; then
     make push-ovirt-populator-image \
         push-ova-proxy-image \
         push-populator-controller-image push-api-image push-controller-image push-validation-image push-operator-image \
-        push-deep-inspection-image push-deep-inspection-rhel9-image \
+        push-deep-inspection-image \
         push-cli-download-image push-virt-v2v-xfs-image \
         push-operator-bundle-image push-operator-index-image \
         OPM_OPTS="--use-http" BUILD_OPT="--network=host"
@@ -56,7 +56,7 @@ if [ "${PROVIDER_NAME}" = "openstack" ]; then
     make push-openstack-populator-image \
         push-ova-proxy-image \
         push-populator-controller-image push-api-image push-controller-image push-validation-image push-operator-image \
-        push-deep-inspection-image push-deep-inspection-rhel9-image \
+        push-deep-inspection-image \
         push-cli-download-image push-virt-v2v-xfs-image \
         push-operator-bundle-image push-operator-index-image \
         OPM_OPTS="--use-http" BUILD_OPT="--network=host"
@@ -66,7 +66,7 @@ if [ "${PROVIDER_NAME}" = "vsphere" ]; then
     make push-ovirt-populator-image \
         push-ova-proxy-image \
         push-populator-controller-image push-api-image push-controller-image push-validation-image push-operator-image \
-        push-deep-inspection-image push-deep-inspection-rhel9-image \
+        push-deep-inspection-image \
         push-cli-download-image push-virt-v2v-xfs-image push-vsphere-copy-offload-populator-image \
         push-operator-bundle-image push-operator-index-image \
         OPM_OPTS="--use-http" BUILD_OPT="--network=host" VIRT_V2V_IMAGE=quay.io/kubev2v/forklift-virt-v2v-stub:latest
@@ -76,7 +76,7 @@ if [ "${PROVIDER_NAME}" = "ova" ]; then
     make push-ova-provider-server-image \
         push-ova-proxy-image \
         push-populator-controller-image push-api-image push-controller-image push-validation-image push-operator-image \
-        push-deep-inspection-image push-deep-inspection-rhel9-image \
+        push-deep-inspection-image \
         push-cli-download-image push-virt-v2v-xfs-image \
         push-operator-bundle-image push-operator-index-image \
         OPM_OPTS="--use-http" BUILD_OPT="--network=host" VIRT_V2V_IMAGE=quay.io/kubev2v/forklift-virt-v2v-stub:latest
@@ -86,7 +86,7 @@ if [ "${PROVIDER_NAME}" = "hyperv" ]; then
     make push-hyperv-provider-server-image \
         push-ova-proxy-image \
         push-populator-controller-image push-api-image push-controller-image push-validation-image push-operator-image \
-        push-deep-inspection-image push-deep-inspection-rhel9-image \
+        push-deep-inspection-image \
         push-cli-download-image push-virt-v2v-xfs-image \
         push-operator-bundle-image push-operator-index-image \
         OPM_OPTS="--use-http" BUILD_OPT="--network=host" VIRT_V2V_IMAGE=quay.io/kubev2v/forklift-virt-v2v-stub:latest
@@ -96,7 +96,7 @@ if [ "${PROVIDER_NAME}" = "all" ] || [ "${PROVIDER_NAME}" = "" ]; then
     make push-ova-provider-server-image push-ovirt-populator-image push-openstack-populator-image push-ovirt-populator-image\
         push-ova-proxy-image \
         push-populator-controller-image push-api-image push-controller-image push-validation-image push-operator-image \
-        push-deep-inspection-image push-deep-inspection-rhel9-image \
+        push-deep-inspection-image \
         push-cli-download-image push-virt-v2v-xfs-image push-vsphere-copy-offload-populator-image push-hyperv-provider-server-image \
         push-operator-bundle-image push-operator-index-image \
         OPM_OPTS="--use-http" BUILD_OPT="--network=host" VIRT_V2V_IMAGE=quay.io/kubev2v/forklift-virt-v2v-stub:latest
