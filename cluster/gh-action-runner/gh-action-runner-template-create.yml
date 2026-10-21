@@ -11,7 +11,7 @@
       docker_ce_gpg_key: "{{ docker_ce_repo_url }}/gpg"
       docker_ce_edge_repo_url: "{{ docker_ce_repo_url }}/{{ ansible_distribution_major_version }}/$basearch/edge"
       version_fedora: 36
-      version_go: "1.20.4"
+      version_go: "1.26.10"
       version_k9s: "0.27.4"
 
     collections:
